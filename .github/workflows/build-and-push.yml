@@ -31,7 +31,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           # images: ${{ vars.DOCKERHUB_USERNAME }}/your_ip
-          images: ${{ shaheedabd96 }}/your_ip # your_ip bisa diganti dengan nama apps
+          images: ${{ vars.shaheedabd96 }}/your_ip # your_ip bisa diganti dengan nama apps
           # The "type=semver" option interprets the Git tag as a semantic version.
           # The pattern "{{version}}" uses the tag value as-is (e.g. "1.0.0").
           tags: |
@@ -44,8 +44,8 @@ jobs:
         with:
           # username: ${{ vars.DOCKERHUB_USERNAME }}
           # password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          username: ${{ shaheedabd96 }}
-          password: ${{ dckr_pat_LTHijlYhc5kZPktY2oddUhlNOqM }}
+          username: ${{ vars.shaheedabd96 }}
+          password: ${{ secrets.dckr_pat_LTHijlYhc5kZPktY2oddUhlNOqM }}
 
       # 5. Build and push the Docker image.
       #    It uses your Dockerfile (ideally a multi-stage build for Golang apps)
