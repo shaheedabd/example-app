@@ -11,7 +11,7 @@ jobs:
     # runs-on: private-runner -> Diganti menjadi ubuntu-latest karena tidak menggunakan private-runner
     runs-on: ubuntu-latest
     # environment: DOCKER_CREDS_PERSONAL
-    environment: DOCKER_CREDS_PERSONAL
+    environment: PLAYGROUND
 
     steps:
       # 1. Check out the repository.
