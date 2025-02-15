@@ -30,8 +30,11 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
+          # vars: digunakan jika membuat Variables (Environments -> Environment variables)
+          # secrets: digunakan jika membuat Secrets (Environments -> Environment secrets)
+          # your_ip bisa diganti dengan nama apps
           # images: ${{ vars.DOCKERHUB_USERNAME }}/your_ip
-          images: ${{ vars.shaheedabd96 }}/your_ip # your_ip bisa diganti dengan nama apps
+          images: ${{ secrets.SHAHEEDABD96 }}/your_ip
           # The "type=semver" option interprets the Git tag as a semantic version.
           # The pattern "{{version}}" uses the tag value as-is (e.g. "1.0.0").
           tags: |
@@ -44,7 +47,7 @@ jobs:
         with:
           # username: ${{ vars.DOCKERHUB_USERNAME }}
           # password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          username: ${{ vars.shaheedabd96 }}
+          username: ${{ secrets.SHAHEEDABD96 }}
           password: ${{ secrets.dckr_pat_LTHijlYhc5kZPktY2oddUhlNOqM }}
 
       # 5. Build and push the Docker image.
